@@ -15,7 +15,7 @@ Principal Component Analysis (PCA) is applied to project species into a low-dime
 
 ## Key Observation
 
-A linear boundary emerges separating:
+A linear boundary appears to emerge separating:
 
 - O–H dominated species  
 - O–O dominated species  
@@ -25,7 +25,7 @@ A held-out species (O3) is then projected to test whether it falls on the expect
 ## Results
 
 - Linear separability in minimal descriptor space  
-- Leave-one-out accuracy: 1.0 (small dataset)  
+- Leave-one-out accuracy: 1.0 (very small dataset; result not yet generalizable) 
 - O3 classified consistently with O–O regime  
 - Boundary score correlates with physical descriptors  
 
