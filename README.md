@@ -39,3 +39,11 @@ A held-out species (O3) is then projected to test whether it falls on the expect
 
 Run:
 ## DOI: https://doi.org/10.5281/zenodo.19069266
+
+## Citation
+
+If you use this work, please cite:
+
+Ojeda, J. (2026).  
+Oxygen Regime Boundary — Minimal Model.  
+Zenodo. https://doi.org/10.5281/zenodo.19069266
