@@ -1,4 +1,5 @@
 # Oxygen Regime Boundary — Minimal Model
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19069266.svg)](https://doi.org/10.5281/zenodo.19069266)
 
 This repository explores whether oxygen chemistry may be structured by regimes (O–O vs O–H dominated species) rather than a continuum.
 
@@ -38,7 +39,12 @@ A held-out species (O3) is then projected to test whether it falls on the expect
 ## Reproducibility
 
 Run:
-## DOI: https://doi.org/10.5281/zenodo.19069266
+
+oxygen_regime_boundary_.ipynb
+
+## DOI
+
+https://doi.org/10.5281/zenodo.19069266
 
 ## Citation
 
