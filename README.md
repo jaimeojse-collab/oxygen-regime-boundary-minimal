@@ -1,80 +1,76 @@
-# Oxygen Regime Boundary — Minimal Model
+# Recoverability Boundary — Minimal Dynamical Model
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19069266.svg)](https://doi.org/10.5281/zenodo.19069266)
 
-This repository explores whether oxygen-related systems may be structured by regimes rather than continuous transitions.
+This repository contains code and simulations supporting the paper:
 
-We investigate two complementary perspectives:
+**A recoverability boundary in a minimal rate-limited dynamical system**  
+Jaime Ojeda (2026)
 
-	•	A descriptor-based boundary (PCA on oxygen species)
-	•	A dynamical boundary (finite-time recovery behavior)
+---
 
-## Approach
+## Overview
 
-1. Descriptor space (oxygen species)
-A minimal descriptor set is used:
+We study a minimal recovery-limited dynamical system under transient forcing.
 
-	•	Molecular weight
-	•	Electron affinity
-	•	Ionization energy
-	•	Number of oxygen atoms
+The system is designed to test whether failure depends only on total input (AUC), or also on the **rate of application (forcing timescale)**.
 
-Principal Component Analysis (PCA) projects species into a low-dimensional space.
+Results suggest that system behavior may separate into recoverable and non-recoverable regimes..., defined by a boundary in the joint space of load and timescale.
 
-A boundary appears to emerge separating:
+---
 
-	•	O–H dominated species
-	•	O–O dominated species
-  
-2. Dynamical system (minimal model)
-A minimal recovery-limited dynamical system is constructed to test whether failure depends on:
+## Model
 
-	•	total load
-	•	vs. rate of application (rise time)  
-  
+The system follows a minimal recovery–damage dynamic:
 
-## Key Observation
+dv/dt = (1 - v)/τ_r − E₀·u(t) + ξ(t)
 
-A boundary appears to emerge separating regimes with distinct recovery behavior.
+Where:
 
-	•	At matched load, recovery depends on rise time
-	•	A region exists where recovery becomes dynamically inaccessible within finite time
-	•	A sharp transition appears in (load, rise_time) space
+- `v` = system state (normalized)
+- `tau_r` = recovery timescale
+- `u(t)` = transient forcing (fixed AUC, variable duration)
+- `E0` = coupling strength
 
-## Results
+The forcing is implemented as a pulse with constant area (AUC) and varying rise time.
 
-	•	Critical load increases with rise time (r ≈ 0.98)
-	•	Recovery time shows nonlinear scaling with load
-	•	A temporal boundary emerges in the system
-	•	Boundary structure is reproducible under minimal assumptions
+---
 
-## Interpretation
+## Key findings
 
-These results suggest that regime structure may depend not only on system state, but on transition dynamics.
+- A **recoverability boundary** emerges in (AUC, timescale) space  
+- Minimum state reached depends primarily on total input (AUC)  
+- Recoverability depends jointly on load and forcing timescale  
+- Recovery time appears primarily controlled by forcing duration  
+- Prior subcritical exposure can shift the system into a non-recoverable regime (history dependence)
 
-This minimal model was originally motivated by structural trajectories observed in oxygen redox systems.  
+---
 
-## Limitations
+## Repository structure
 
-	•	Very small dataset (descriptor model)
-	•	Minimal dynamical abstraction (not system-specific)
-	•	No direct comparison with experimental data yet
-	•	Results are hypothesis-generating  
+- `recoverability_boundary_model.ipynb` — main simulation notebook  
+- `figures/` — figures used in the manuscript  
+- `paper/` — manuscript PDF  
+
+---
 
 ## Reproducibility
 
-Run:
-finite_time_recovery_boundary.ipynb
-and
-oxygen_regime_boundary_.ipynb
+All figures in the manuscript can be reproduced directly from the notebook.
 
-## DOI
+---
+## Interpretation
 
-https://doi.org/10.5281/zenodo.19069266
+This is a minimal model intended to isolate a structural hypothesis:
 
-## Citation
+> Failure may arise from a mismatch between input rate and recovery capacity, rather than absolute load alone.
 
-If you use this work, please cite:
+These results are consistent with a rate-limited failure mechanism, where system collapse may occur when input dynamics exceed recovery capacity over finite time.
 
-Ojeda, J. (2026).  
-Oxygen Regime Boundary — Minimal Model.  
-Zenodo. https://doi.org/10.5281/zenodo.19069266
+The model does not aim to represent a specific biological system, but to test a general dynamical mechanism under minimal assumptions.
+
+---
+
+## License
+
+MIT License
