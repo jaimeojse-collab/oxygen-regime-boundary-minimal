@@ -1,6 +1,6 @@
 # Recoverability Boundary — Minimal Dynamical Model
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19069266.svg)](https://doi.org/10.5281/zenodo.19069266)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19069265.svg)](https://doi.org/10.5281/zenodo.19069265)
 
 This repository contains code and simulations supporting the paper:
 
