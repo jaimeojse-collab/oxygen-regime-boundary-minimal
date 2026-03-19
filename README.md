@@ -15,7 +15,7 @@ We study a minimal recovery-limited dynamical system under transient forcing.
 
 The system is designed to test whether failure depends only on total input (AUC), or also on the **rate of application (forcing timescale)**.
 
-Results suggest that system behavior may separate into recoverable and non-recoverable regimes..., defined by a boundary in the joint space of load and timescale.
+Results suggest that system behavior may separate into recoverable and non-recoverable regimes, defined by a boundary in the joint space of load and timescale.
 
 ---
 
